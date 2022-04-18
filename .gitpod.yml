@@ -1,0 +1,14 @@
+
+image:
+  file: Dockerfile
+ports:
+  - port: 1313
+    onOpen: open-preview
+
+tasks:
+  - init: |
+      hugo mod get
+      npm install
+    command: hugo serve
+
+
